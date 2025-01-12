@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .title {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- <h1 id="titleText" class="">Hello World</h1>
+  <div id="greeting">aespa</div>
+  <button onclick="hideElement()" id="changeBtn">Hide Element</button> -->
+  <input type="text" name="" id="todo">
+  <button onclick="addElement()">Add Elememt</button>
+  <div id="results">
+
+  </div>
+  <script src="script.js"></script>
+  <script>
+    function addElement(){
+      let inp = document.getElementById('todo').value
+      let newElement = document.createElement("p")
+      newElement.innerHTML = inp
+      let result = document.getElementById('results')
+      result.appendChild(newElement)
+      document.getElementById('todo').value = ""
+    }
+  </script>
+
+</body>
+</html>
